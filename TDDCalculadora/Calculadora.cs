@@ -6,24 +6,24 @@ namespace TDDCalculadora
 {
     public class Calculadora
     {
-        public int somar(int x, int y)
+        public int somar(int valorUm, int valorDois)
         {
-            return 0;
+            return valorUm + valorDois;
         }
 
-        public int subtrair(int x, int y)
+        public int subtrair(int valorUm, int valorDois)
         {
-            return -1;
+            return valorUm - valorDois;
         }
 
-        public int multiplicar(int x, int y)
+        public int multiplicar(int valorUm, int valorDois)
         {
-            return 0;
+            return valorUm * valorDois;
         }
 
-        public int dividir(int x, int y)
+        public int dividir(int valorUm, int valorDois)
         {
-            return 0;
+            return valorUm / valorDois;
         }
 
         public List<String> histórico()
