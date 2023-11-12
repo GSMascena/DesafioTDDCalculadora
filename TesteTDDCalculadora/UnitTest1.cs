@@ -7,12 +7,17 @@ namespace TesteTDDCalculadora
 {
     public class UnitTest1
     {
+        public Calculadora construirClasse()
+        {
+            return new Calculadora("12/11/2000");
+        }
+
         [Theory]
         [InlineData (1, 2, 3)]
         [InlineData (4, 5, 9)]
         public void TesteSomar(int valorUm, int valorDois, int valorResultado)
         {
-            Calculadora calculadora = new Calculadora();
+            Calculadora calculadora = construirClasse();
 
             int resultado = calculadora.somar(valorUm, valorDois);
 
@@ -24,7 +29,7 @@ namespace TesteTDDCalculadora
         [InlineData(5, 5, 0)]
         public void TesteSubtrair(int valorUm, int valorDois, int valorResultado)
         {
-            Calculadora calculadora = new Calculadora();
+            Calculadora calculadora = construirClasse();
 
             int resultado = calculadora.subtrair(valorUm, valorDois);
 
@@ -36,7 +41,7 @@ namespace TesteTDDCalculadora
         [InlineData(4, 5, 20)]
         public void TesteMultiplicar(int valorUm, int valorDois, int valorResultado)
         {
-            Calculadora calculadora = new Calculadora();
+            Calculadora calculadora = construirClasse();
 
             int resultado = calculadora.multiplicar(valorUm, valorDois);
 
@@ -48,7 +53,7 @@ namespace TesteTDDCalculadora
         [InlineData(5, 5, 1)]
         public void TesteDividir(int valorUm, int valorDois, int valorResultado)
         {
-            Calculadora calculadora = new Calculadora();
+            Calculadora calculadora = construirClasse();
 
             int resultado = calculadora.dividir(valorUm, valorDois);
 
@@ -58,7 +63,7 @@ namespace TesteTDDCalculadora
         [Fact]
         public void TestarDivisaoPorZero()
         {
-            Calculadora calculadora = new Calculadora();
+            Calculadora calculadora = construirClasse();
 
             Assert.Throws<DivideByZeroException>(
                 () => calculadora.dividir(3, 0)
@@ -68,7 +73,7 @@ namespace TesteTDDCalculadora
         [Fact]
         public void TestarHistorico()
         {
-            Calculadora calculadora = new Calculadora();
+            Calculadora calculadora = construirClasse();
 
             calculadora.somar(1, 1);
             calculadora.somar(1, 1);

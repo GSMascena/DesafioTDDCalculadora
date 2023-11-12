@@ -8,10 +8,12 @@ namespace TDDCalculadora
     {
         private List<string> listaHistorico;
         private const int limiteHistorico = 3;
+        private string data;
 
-        public Calculadora()
+        public Calculadora(string data)
         {
             listaHistorico = new List<string>();
+            this.data = data;
         }
         public int somar(int valorUm, int valorDois)
         {
@@ -35,7 +37,7 @@ namespace TDDCalculadora
 
         private int executarOperacao(int resultado)
         {
-            listaHistorico.Insert(0,"Resultado: " + resultado);
+            listaHistorico.Insert(0,"Resultado: " + resultado + " | " + data );
             return resultado;
         }
 
