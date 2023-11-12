@@ -75,7 +75,7 @@ namespace TesteTDDCalculadora
             calculadora.somar(1, 1);
             calculadora.somar(1, 1);
 
-            var lista = calculadora.histórico();
+            var lista = calculadora.historico();
 
             Assert.NotEmpty(lista);
             Assert.Equal(3, lista.Count);
