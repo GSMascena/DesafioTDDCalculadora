@@ -4,7 +4,7 @@ using System.Text;
 
 namespace TDDCalculadora
 {
-    class Calculadora
+    public class Calculadora
     {
         public int somar(int x, int y)
         {
@@ -13,7 +13,7 @@ namespace TDDCalculadora
 
         public int subtrair(int x, int y)
         {
-            return 0;
+            return -1;
         }
 
         public int multiplicar(int x, int y)
